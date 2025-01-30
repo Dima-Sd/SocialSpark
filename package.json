@@ -1,0 +1,22 @@
+{
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "del": "^6.1.1",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.77.8",
+    "jquery": "^3.7.1"
+  },
+  "name": "gulp-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmytros",
+  "license": "ISC",
+  "description": ""
+}
