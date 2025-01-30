@@ -1,0 +1,46 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+figure,
+figcaption{
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button{
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+}
