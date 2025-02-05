@@ -17,10 +17,15 @@ h5,
 h6,
 p,
 ul,
-li,
-figure,
-figcaption{
+li {
     margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font: inherit;
 }
 
 ul {
@@ -37,10 +42,19 @@ img {
     display: block;
 }
 
-button{
-    font: inherit;
+a,
+button {
+    outline: transparent;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }
