@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('../components/head.html', {
+title:'Social Spark – Маркетингова Агенція'
+});
+
+<body>
+    @@include('../components/theme-switcher.html')
+    @@include('../components/header.html', {
+    altDesc:'Логотип агентства Social Spark',
+    aboutLink:'Про нас',
+    platformsLink:'Соціальні платформи',
+    singUp: 'Реєстрація',
+    currentLang:'uk',
+    lang:'en',
+    srcLang: 'index'
+    })
+    <main class="main">
+        <section class="hero section">
+            <div class="container">
+                <div class="hero__inner">
+                    <h1 class="hero__title">
+                        Агентство SMM-маркетингу
+                    </h1>
+                    <p class="hero__description">
+                        Професійна команда, яка допомагає брендам, блогерам і бізнесам зростати в соціальних мережах.
+                    </p>
+                    <a class="cta" href="#">
+                        Розпочніть зараз
+                        <svg class="icon" width="21" height="20">
+                            <use href="./images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <img class="hero__img" src="./images/window.png"
+                    alt="Performance analysis that ensures rapid growth for social media accounts" width="944"
+                    height="586">
+            </div>
+        </section>
+        <section class="offer section" style="background-image: url('./images/interview.jpg');">
+            <div class="container">
+                <div class="offer__inner">
+                    <h2 class="offer__title">
+                        Не втрать момент!
+                        <span class="visually-hidden">
+                            Пропозиція команди щодо покращення вашого акаунту в соціальних мережах.
+                        </span>
+                    </h2>
+                    <p class="offer__description">
+                        Наша команда пропонує послугу повного управління вашим акаунтом у соцмережах. Ми візьмемо на
+                        себе його розвиток і вдосконалення, тож вам не доведеться витрачати час і занурюватися в деталі.
+                        Ідеальний варіант для тих, хто хоче якісний результат без зайвих клопотів.
+                    </p>
+                    <div class="offer__team">
+                        <h3 class="offer__subtitle">
+                            Команда
+                        </h3>
+                        <ul class="offer__team-list">
+                            <li class="offer__team-item">
+                                @@include('../components/cardTeam.html', {
+                                memberName: 'Лукас Бенет',
+                                imgName: 'lucasBennett',
+                                accessibility: 'Зв&#39;язатися з членом команди'
+                                })
+                            </li>
+                            <li class="offer__team-item">
+                                @@include('../components/cardTeam.html', {
+                                memberName: 'Генрі Блеквуд',
+                                imgName: 'henryBlackwood',
+                                accessibility: 'Зв&#39;язатися з членом команди'
+                                })
+                            </li>
+                            <li class="offer__team-item">
+                                @@include('../components/cardTeam.html', {
+                                memberName: 'Джон Сміт',
+                                imgName: 'johnSmith',
+                                accessibility: 'Зв&#39;язатися з членом команди'
+                                })
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('../components/scripts.html')
+</body>
+
+</html>

@@ -1,142 +1,26 @@
 .header {
     background-color: $accent-dark;
+    color: $accent-light;
     padding: 53px 0 27px;
-
-    &__container {
-        color: $accent-light;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    &__inner {
-        position: relative;
-        z-index: 1;
-        margin: 0 25px 0 auto;
-    }
-
-    &__lang {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        gap: 3px;
-        font-size: 12px;
-        outline: 1px solid $accent-light;
-        background-color: $accent-dark;
-        transition: background-color 0.3s, outline-color 0.3s, box-shadow 0.3s;
-
-        &.is-open {
-            .header__icon {
-                transform: rotate(180deg);
-            }
-        }
-
-        &:hover {
-            background-color: $secondary-green;
-            outline-color: transparent;
-        }
-
-        &:focus {
-            outline-color: $secondary-green;
-        }
-
-        &:active {
-            background-color: transparent;
-            outline-color: transparent;
-            box-shadow: inset 4px 4px 6px $secondary-green;
-        }
-    }
-
-    &__list {
-        position: absolute;
-        top: 50%;
-        text-align: center;
-        background-color: $dark-800;
-        border-radius: 0 0 30px 30px;
-        width: 100%;
-        z-index: -1;
-        padding-top: 27px;
-        pointer-events: none;
-        cursor: none;
-        opacity: 0;
-        transition: opacity 0.3s;
-
-        &.is-open {
-            opacity: 100%;
-            pointer-events: auto;
-            cursor: default;
-        }
-    }
-
-    &__list-link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        font-size: 12px;
-        border-radius: 30px;
-        transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
-
-        &:hover {
-            background-color: $secondary-green;
-        }
-
-        &:focus {
-            outline: 1px solid $secondary-green;
-        }
-
-        &:active {
-            opacity: 0.5;
-        }
-    }
-
-    &__link {
-        display: inline-block;
-        font-size: 18px;
-        line-height: 1;
-        padding: 13px 35px;
-        outline: 1px solid $accent-light;
-        border-radius: 30px;
-        transition: background-color 0.3s, outline-color 0.3s, box-shadow 0.4s;
-
-        &:hover {
-            outline-color: transparent;
-            background-color: $secondary-green;
-        }
-
-        &:focus {
-            outline-color: $secondary-green;
-        }
-
-        &:active {
-            outline: transparent;
-            background-color: transparent;
-            box-shadow: inset 4px 4px 6px $secondary-green;
-        }
-    }
 }
 
 .menu {
     display: flex;
-    gap: 181px;
+    justify-content: space-between;
+    align-items: flex-start;
 
     &__list {
         display: flex;
-        align-self: flex-start;
-        gap: 39px;
+        gap: 40px;
     }
 
     &__link {
         font-size: 18px;
-        display: inline-block;
         line-height: 1;
-        padding: 14px 39px 13px 39px;
+        color: $accent-light;
         background-color: $dark-800;
         border-radius: 30px;
+        padding: 14px 39px;
         outline-offset: 6px;
         transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
 
@@ -154,3 +38,73 @@
     }
 }
 
+.user-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.switcher-lang {
+    position: relative;
+    z-index: 1;
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        gap: 3px;
+        border-radius: 50%;
+        font-size: 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s, outline 0.3s, box-shadow 0.3s, opacity 0.3s;
+
+        &:hover {
+            background-color: $secondary-green;
+
+            &.current {
+                outline-color: transparent;
+            }
+        }
+
+        &:focus {
+            outline: 1px solid $secondary-green;
+
+            &.current {
+                outline-color: $secondary-green;
+            }
+        }
+
+        &:active {
+            opacity: 0.5;
+
+            &.current {
+                opacity: 100%;
+                outline-color: transparent;
+                background-color: transparent;
+                box-shadow: inset 4px 4px 6px $secondary-green;
+            }
+        }
+    }
+
+    &__link.current {
+        outline: 1px solid $accent-light;
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+        background-color: $dark-800;
+        width: 100%;
+        border-radius: 0 0 22px 22px;
+        padding-top: 30px;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &.active {
+            opacity: 100%;
+        }
+    }
+}

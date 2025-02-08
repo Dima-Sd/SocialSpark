@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../components/head.html', {
+title:'Social Spark – Marketing Agency'
+});
+
+<body>
+    @@include('../components/theme-switcher.html')
+    @@include('../components/header.html', {
+    altDesc:'Logo of the Social Spark agency',
+    aboutLink:'About',
+    platformsLink:'Social platforms',
+    singUp: 'Sign up',
+    currentLang:'en',
+    lang:'uk',
+    srcLang: 'index-uk'
+    })
+    <main class="main">
+        <section class="hero section">
+            <div class="container">
+                <div class="hero__inner">
+                    <h1 class="hero__title">
+                        Social Media Marketing Agency
+                    </h1>
+                    <p class="hero__description">
+                        A professional team that helps brands, bloggers and businesses grow on social media
+                    </p>
+                    <a class="cta" href="#">
+                        Get started now
+                        <svg class="icon" width="21" height="20">
+                            <use href="./images/sprite.svg#arrow-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                <img class="hero__img" src="./images/window.png"
+                    alt="Performance analysis that ensures rapid growth for social media accounts" width="944"
+                    height="586">
+            </div>
+        </section>
+        <section class="offer section" style="background-image: url('./images/interview.jpg');">
+            <div class="container">
+                <div class="offer__inner">
+                    <h2 class="offer__title">
+                        Seize the moment!
+                        <span class="visually-hidden">
+                            Team's proposal for enhancing your social media account.
+                        </span>
+                    </h2>
+                    <p class="offer__description">
+                        Our team also offers a service that will allow you to completely hand over your account
+                        management to us. We will take care of its development and improvement without your
+                        participation. This option is ideal for those who do not have the time or desire to delve into
+                        the details of working with an account on social networks.
+                    </p>
+                    <div class="offer__team">
+                        <h3 class="offer__subtitle">
+                            Team
+                        </h3>
+                        <ul class="offer__team-list">
+                            <li class="offer__team-item">
+                                @@include('../components/cardTeam.html', {
+                                memberName: 'Lucas Bennett',
+                                imgName: 'lucasBennett',
+                                accessibility: 'Get in touch with a team member'
+                                })
+                            </li>
+                            <li class="offer__team-item">
+                                @@include('../components/cardTeam.html', {
+                                memberName: 'Henry Blackwood',
+                                imgName: 'henryBlackwood',
+                                accessibility: 'Get in touch with a team member'
+                                })
+                            </li>
+                            <li class="offer__team-item">
+                                @@include('../components/cardTeam.html', {
+                                memberName: 'John Smith',
+                                imgName: 'johnSmith',
+                                accessibility: 'Get in touch with a team member'
+                                })
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('../components/scripts.html')
+</body>
+
+</html>

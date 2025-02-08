@@ -14,9 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     })();
 
-    const buttonSwitcher = document.querySelector('[data-switcher]')
+});
+const buttonSwitcher = document.querySelector('[data-theme-switcher]')
 
-    buttonSwitcher.addEventListener('click' , function() {
-        this.classList.toggle('on')
-    })
+buttonSwitcher.addEventListener('click', function () {
+    this.classList.toggle('theme-light')
+})
+
+const langSwitcher = document.querySelector('.current')
+const langList = document.querySelector('.switcher-lang__list')
+langSwitcher.addEventListener('click', function () {
+    langList.classList.toggle('active')
 });

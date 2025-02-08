@@ -29,7 +29,7 @@
     &__title {
         font-size: 35px;
         margin-bottom: 44px;
-        font-family: "Fredoka", serif;
+        font-family: "Nunito", serif;
         color: $accent-light;
     }
 
@@ -38,16 +38,18 @@
     }
 
     &__subtitle {
-        font-family: "Fredoka", serif;
+        font-family: "Nunito", serif;
         color: $accent-light;
         font-size: 20px;
         margin-bottom: 24px;
     }
 
-    &__item {
+    &__team-item {
         position: relative;
+
         &:not(:last-child) {
             margin-bottom: 30px;
+
             &::before {
                 content: "";
                 position: absolute;
