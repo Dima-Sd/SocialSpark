@@ -5,6 +5,7 @@ const concat = require('gulp-concat')
 const autoprefixer = require('gulp-autoprefixer')
 const uglify = require('gulp-uglify-es').default
 const browserSync = require('browser-sync').create()
+const fileInclude = require('gulp-file-include')
 
 function styles() {
     return src(['app/scss/style.scss'])
@@ -33,16 +34,15 @@ function scripts() {
         .pipe(browserSync.stream())
 }
 
-// function build() {
-//     return src([
-//         'app/css/**/*.css',
-//         'app/js/main.min.js',
-//         'app/*.html'
-//     ], { base: 'app' })
-
-//         .pipe(dest('dist'))
-// }
-
+function htmlInclude() {
+    return src('app/html/pages/*.html')
+        .pipe(fileInclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('app'))
+        .pipe(browserSync.stream());
+}
 
 function browsersync() {
     browserSync.init({
@@ -60,6 +60,7 @@ function watching() {
 
 exports.styles = styles
 exports.scripts = scripts
+exports.htmlInclude = htmlInclude
 exports.watching = watching
 exports.browsersync = browsersync
-exports.default = parallel(styles, scripts, watching, browsersync,)
+exports.default = parallel(styles, scripts, watching, browsersync, htmlInclude)

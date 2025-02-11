@@ -8,6 +8,11 @@
         color: $accent-light;
     }
 
+    &__img {
+        order: -1;
+        border-radius: 50%;
+    }
+
     &__link {
         display: flex;
         align-items: center;

@@ -1,5 +1,5 @@
 body {
-    font-family: "Baloo 2", serif;
+    font-family: "Rubik", serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.3;
@@ -8,6 +8,7 @@ body {
     color: $light-800;
     min-height: 100vh;
     background-image: linear-gradient($accent-dark, $green-800, $accent-dark, $green-700, $accent-dark);
+    border-radius: 30px;
 }
 
 .visually-hidden {
@@ -23,53 +24,8 @@ body {
     overflow: hidden;
 }
 
-.switcher {
-    position: fixed;
-    right: 100px;
-    bottom: 84px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 14px;
-    width: 89px;
-    height: 44px;
-    background-color: $dark-700;
-    color: $light-900;
-    border-radius: 30px;
-    z-index: 999;
-    outline-offset: 4px;
-    transition: outline 0.3s;
-
-    &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background-color: $light-600;
-        z-index: -1;
-        transition: background-color 0.3s, outline 0.3s, box-shadow 0.3s, left 0.3s;
-    }
-
-    &:hover::before {
-        background-color: $secondary-green;
-    }
-
-    &:focus {
-        outline: 1px solid $secondary-green;
-    }
-
-    &:active::before {
-        box-shadow: inset 4px 4px 6px $secondary-green;
-        background-color: $accent-dark;
-    }
-
-    &.on {
-        &::before {
-            left: 45px;
-        }
-    }
+.icon {
+    fill: currentColor;
 }
 
 .section {
@@ -83,7 +39,7 @@ body {
 }
 
 .title {
-    font-family: "Fredoka", serif;
+    font-family: "Nunito", serif;
     font-size: 70px;
     line-height: 1.2;
     color: $accent-light;
@@ -109,41 +65,47 @@ body {
     }
 }
 
-.icon {
-    fill: currentColor;
+.sing-up {
+    align-self: flex-start;
+    border-radius: 30px;
+    line-height: 1;
+    font-size: 18px;
+    padding: 13px 34px;
+    outline: 1px solid $accent-light;
+    transition: background-color 0.3s, outline-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        background-color: $secondary-green;
+        outline-color: transparent;
+    }
+
+    &:focus {
+        outline-color: $secondary-green;
+    }
+
+    &:active {
+        outline-color: transparent;
+        background-color: transparent;
+        box-shadow: inset 4px 4px 6px $secondary-green;
+    }
 }
 
-.link {
+.cta {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 13px 29px;
+    padding: 14px 29px 13px;
     font-size: 18px;
     background-color: $accent-light;
     color: $accent-dark;
     line-height: 1;
     border-radius: 20px;
     outline-offset: 7px;
-    transition: background-color 0.3s, color 0.3s, outline 0.3s, box-shadow 0.3s, background-color 0.3s;
-
-    &__box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        outline: 1px solid $accent-dark;
-        transition: outline-color 0.3s;
-    }
+    transition: background-color 0.3s, color 0.3s, outline 0.3s, box-shadow 0.3s;
 
     &:hover {
         background-color: $secondary-green;
         color: $accent-light;
-
-        .link__box {
-            outline-color: $accent-light;
-        }
     }
 
     &:focus {
@@ -154,9 +116,5 @@ body {
         background-color: transparent;
         color: $accent-light;
         box-shadow: inset 4px 4px 6px $secondary-green;
-
-        .link__box {
-            outline-color: $accent-light;
-        }
     }
 }

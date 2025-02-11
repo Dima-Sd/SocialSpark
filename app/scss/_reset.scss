@@ -45,11 +45,12 @@ img {
 a,
 button {
     outline: transparent;
+    display: inline-block;
+    color: inherit;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 button {
