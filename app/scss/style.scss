@@ -1,8 +1,12 @@
 @import "reset";
 @import "vars";
 @import "global";
+@import "global/switcherTheme";
 @import "global/header";
+@import "global/switcherLang";
 @import "sections/hero";
 @import "sections/offer";
 @import "global/team-card";
-@import "global/theme-switcher";
+@import "sections/statistic";
+@import "sections/faq";
+@import "sections/footer";

@@ -2,13 +2,12 @@
     <div class="container">
         <nav class="menu">
             <a class="logo" href="#">
-                <img class="logo__img" src="./images/logo.svg" alt="@@altDesc" width="137"
-                    height="75">
+                <img class="logo__img" src="./images/logo.svg" alt="Logo of the Social Spark agency" width="137" height="75">
             </a>
             <ul class="menu__list">
                 <li class="menu__item">
                     <a class="menu__link" href="#">
-                        @@aboutLink
+                        About
                     </a>
                 </li>
                 <li class="menu__item">
@@ -18,28 +17,14 @@
                 </li>
                 <li class="menu__item">
                     <a class="menu__link" href="#">
-                        @@platformsLink
+                        Social platforms
                     </a>
                 </li>
             </ul>
             <div class="user-menu">
-                <div class="switcher-lang">
-                    <span class="switcher-lang__link current" href="#">
-                        @@currentLang
-                        <svg class="icon switcher-lang__icon" width="6" height="5">
-                            <use href="./images/sprite.svg#arrow-down"></use>
-                        </svg>
-                    </span>
-                    <ul class="switcher-lang__list">
-                        <li class="switcher-lang__item">
-                            <a class="switcher-lang__link" href="@@srcLang.html">
-                                @@lang
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                @@include('switcherLang.html')
                 <a class="sing-up" href="#">
-                    @@singUp
+                    Sign up
                 </a>
             </div>
         </nav>

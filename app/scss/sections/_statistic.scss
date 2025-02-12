@@ -1,0 +1,89 @@
+.statistic {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 80px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 45px;
+        max-width: 576px;
+        width: 100%;
+        border-radius: 40px;
+        background-color: $green-900-opacity;
+        padding: 56px 60px;
+    }
+
+    &__item {
+
+        &::after {
+            content: "";
+            display: block;
+            width: 61px;
+            height: 60px;
+            margin: 0 auto;
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        &--facebook::after {
+            background-image: url('../images/social/facebook.png');
+        }
+
+        &--telegram::after {
+            background-image: url('../images/social/telegram.png');
+        }
+
+        &--instagram::after {
+            background-image: url('../images/social/instagram.png');
+        }
+
+        &--tiktok::after {
+            background-image: url('../images/social/tiktok.png');
+        }
+    }
+
+    &__line {
+        display: flex;
+        align-items: flex-end;
+        width: 60px;
+        height: 561px;
+        margin: 25px auto;
+        border-radius: 20px 20px 10px 10px;
+        background-color: $dark-800;
+    }
+
+    &__cover {
+        background-color: $green-500;
+        border-radius: 0 0 10px 10px;
+        width: 100%;
+    }
+
+    &__list-feature__item {
+        max-width: 512px;
+        width: 100%;
+        border-radius: 30px;
+        padding: 27px 35px;
+        background-color: $green-900-opacity;
+
+        &:not(:last-child) {
+            margin-bottom: 48px;
+        }
+    }
+
+    &__list-feature__title {
+        margin-bottom: 26px;
+        font-size: 20px;
+        color: $accent-light;
+        font-weight: 500;
+        font-family: "Nunito", serif;
+    }
+
+    &__list-feature__description {
+        line-height: 1;
+    }
+}

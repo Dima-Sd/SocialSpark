@@ -1,0 +1,66 @@
+.switcher-lang {
+    position: relative;
+    z-index: 1;
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        gap: 3px;
+        border-radius: 50%;
+        font-size: 12px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s, outline 0.3s, box-shadow 0.3s, opacity 0.3s;
+
+        &:hover {
+            background-color: $secondary-green;
+
+            &.current {
+                outline-color: transparent;
+            }
+        }
+
+        &:focus {
+            outline: 1px solid $secondary-green;
+
+            &.current {
+                outline-color: $secondary-green;
+            }
+        }
+
+        &:active {
+            opacity: 0.5;
+
+            &.current {
+                opacity: 100%;
+                outline-color: transparent;
+                background-color: transparent;
+                box-shadow: inset 4px 4px 6px $secondary-green;
+            }
+        }
+    }
+
+    &__link.current {
+        outline: 1px solid $accent-light;
+    }
+
+    &__link--uk {
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+        background-color: $dark-800;
+        width: 100%;
+        height: 71px;
+        border-radius: 0 0 22px 22px;
+        padding-top: 30px;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &.active {
+            opacity: 100%;
+        }
+    }
+}

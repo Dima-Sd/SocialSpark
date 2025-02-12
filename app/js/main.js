@@ -22,7 +22,21 @@ buttonSwitcher.addEventListener('click', function () {
 })
 
 const langSwitcher = document.querySelector('.current')
-const langList = document.querySelector('.switcher-lang__list')
+const langList = document.querySelector('.switcher-lang__link--uk')
 langSwitcher.addEventListener('click', function () {
     langList.classList.toggle('active')
+});
+
+const accordionButtons = document.querySelectorAll('[data-open-accordion]');
+
+accordionButtons.forEach(function (item) {
+    item.addEventListener('click', function () {
+        accordionButtons.forEach(btn => {
+            if (btn !== item) {
+                btn.classList.remove("active");
+            }
+        });
+
+        this.classList.toggle("active");
+    });
 });
