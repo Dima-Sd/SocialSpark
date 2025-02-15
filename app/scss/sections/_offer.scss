@@ -15,22 +15,23 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background-color: $dark-800-opacity;
+        background-color: var(--dark-800-opacity);
     }
 
     &__inner {
         max-width: 603px;
         width: 100%;
         padding: 72px 40px;
-        background-color: $accent-dark;
+        background-color: var(--background);
         border-radius: 20px;
+        transition: background-color 0.4s;
     }
 
     &__title {
         font-size: 35px;
         margin-bottom: 44px;
         font-family: "Nunito", serif;
-        color: $accent-light;
+        color: var(--accent);
     }
 
     &__description {
@@ -39,7 +40,7 @@
 
     &__subtitle {
         font-family: "Nunito", serif;
-        color: $accent-light;
+        color: var(--accent);
         font-size: 20px;
         margin-bottom: 24px;
     }
@@ -56,7 +57,8 @@
                 bottom: -15px;
                 width: 100%;
                 height: 1px;
-                background-color: $dark-800;
+                background-color: var(--main-gradient);
+                transition: background-color 0.3s;
             }
         }
     }

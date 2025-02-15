@@ -12,11 +12,12 @@
         border-radius: 50%;
         font-size: 12px;
         text-transform: uppercase;
+        background-color: var(--main-gradient);
         cursor: pointer;
         transition: background-color 0.3s, outline 0.3s, box-shadow 0.3s, opacity 0.3s;
 
         &:hover {
-            background-color: $secondary-green;
+            background-color: var(--secondary-green);
 
             &.current {
                 outline-color: transparent;
@@ -24,10 +25,10 @@
         }
 
         &:focus {
-            outline: 1px solid $secondary-green;
+            outline: 1px solid var(--secondary-green);
 
             &.current {
-                outline-color: $secondary-green;
+                outline-color: var(--secondary-green);
             }
         }
 
@@ -38,29 +39,31 @@
                 opacity: 100%;
                 outline-color: transparent;
                 background-color: transparent;
-                box-shadow: inset 4px 4px 6px $secondary-green;
+                box-shadow: inset 4px 4px 6px var(--secondary-green);
             }
         }
     }
 
     &__link.current {
-        outline: 1px solid $accent-light;
+        outline: 1px solid var(--accent);
     }
 
     &__link--uk {
         position: absolute;
         top: 50%;
         z-index: -1;
-        background-color: $dark-800;
+        background-color: var(--background-progressbar);
         width: 100%;
         height: 71px;
         border-radius: 0 0 22px 22px;
         padding-top: 30px;
         opacity: 0;
+        pointer-events: none;
         transition: opacity 0.3s;
 
         &.active {
             opacity: 100%;
+            pointer-events: all;
         }
     }
 }

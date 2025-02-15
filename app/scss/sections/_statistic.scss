@@ -13,11 +13,13 @@
         max-width: 576px;
         width: 100%;
         border-radius: 40px;
-        background-color: $green-900-opacity;
+        background-color: var(--background);
         padding: 56px 60px;
+        transition: background-color 0.3s;
     }
 
     &__item {
+        text-align: center;
 
         &::after {
             content: "";
@@ -54,36 +56,37 @@
         height: 561px;
         margin: 25px auto;
         border-radius: 20px 20px 10px 10px;
-        background-color: $dark-800;
+        background-color: var(--background-progressbar);
     }
 
     &__cover {
-        background-color: $green-500;
+        background-color: var(--green);
         border-radius: 0 0 10px 10px;
         width: 100%;
     }
 
-    &__list-feature__item {
+    &__list-feature-item {
         max-width: 512px;
         width: 100%;
         border-radius: 30px;
         padding: 27px 35px;
-        background-color: $green-900-opacity;
+        background-color: var(--background);
+        transition: background-color 0.4s;
 
         &:not(:last-child) {
             margin-bottom: 48px;
         }
     }
 
-    &__list-feature__title {
+    &__list-feature-title {
         margin-bottom: 26px;
         font-size: 20px;
-        color: $accent-light;
+        color: var(--accent);
         font-weight: 500;
         font-family: "Nunito", serif;
     }
 
-    &__list-feature__description {
+    &__list-feature-description {
         line-height: 1;
     }
 }

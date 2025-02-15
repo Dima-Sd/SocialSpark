@@ -1,9 +1,9 @@
 @@include('../components/head.html', {
 title:'Social Spark – Marketing Agency',
 lang: 'en'
-});
+})
 
-<body>
+<body class="light-theme">
     @@include('../components/switcherTheme.html')
     @@include('../components/header.html')
     <main class="main">
@@ -81,64 +81,64 @@ lang: 'en'
                         <li class="statistic__item statistic__item--facebook">
                             1.92 billion
                             <div class="statistic__line">
-                                <div class="statistic__cover" style="height: 496px;"></div>
+                                <div class="statistic__cover" style="height: 90%;"></div>
                             </div>
                         </li>
                         <li class="statistic__item statistic__item--telegram">
                             950 million
                             <div class="statistic__line">
-                                <div class="statistic__cover" style="height: 275px;"></div>
+                                <div class="statistic__cover" style="height: 50%;"></div>
                             </div>
                         </li>
                         <li class="statistic__item statistic__item--instagram">
                             1,47 billion
                             <div class="statistic__line">
-                                <div class="statistic__cover" style="height: 434px;"></div>
+                                <div class="statistic__cover" style="height: 70%;"></div>
                             </div>
                         </li>
                         <li class="statistic__item statistic__item--tiktok">
                             1.12 billion
                             <div class="statistic__line">
-                                <div class="statistic__cover" style="height: 365px;"></div>
+                                <div class="statistic__cover" style="height: 60%;"></div>
                             </div>
                         </li>
                     </ul>
                     <ul class="statistic__list-feature">
-                        <li class="statistic__list-feature__item">
-                            <h3 class="statistic__list-feature__title">
+                        <li class="statistic__list-feature-item">
+                            <h3 class="statistic__list-feature-title">
                                 Facebook
                             </h3>
-                            <p class="statistic__list-feature__description">
+                            <p class="statistic__list-feature-description">
                                 The platform is suitable for advertising campaigns, expanding the customer base, as well
                                 as for communicating with friends and family. Facebook is a good choice for an older
                                 audience.
                             </p>
                         </li>
-                        <li class="statistic__list-feature__item">
-                            <h3 class="statistic__list-feature__title">
+                        <li class="statistic__list-feature-item">
+                            <h3 class="statistic__list-feature-title">
                                 Telegram
                             </h3>
-                            <p class="statistic__list-feature__description">
+                            <p class="statistic__list-feature-description">
                                 Telegram is very well suited for business due to the ability to create channels to
                                 inform customers, group chats for teamwork, and automated bots to solve various tasks.
                             </p>
                         </li>
-                        <li class="statistic__list-feature__item">
-                            <h3 class="statistic__list-feature__title">
+                        <li class="statistic__list-feature-item">
+                            <h3 class="statistic__list-feature-title">
                                 Instagram
                             </h3>
-                            <p class="statistic__list-feature__description">
+                            <p class="statistic__list-feature-description">
                                 Instagram is suitable for businesses due to the ability to create engaging visual
                                 content,
                                 engage audiences through posts, stories, and ads, and collaborate with influencers to
                                 promote the brand.
                             </p>
                         </li>
-                        <li class="statistic__list-feature__item">
-                            <h3 class="statistic__list-feature__title">
+                        <li class="statistic__list-feature-item">
+                            <h3 class="statistic__list-feature-title">
                                 Tik tok
                             </h3>
-                            <p class="statistic__list-feature__description">
+                            <p class="statistic__list-feature-description">
                                 TikTok is suitable for business due to the ability to create short videos to attract a
                                 young audience, use trending content to increase brand awareness brand awarene
                             </p>
@@ -153,11 +153,16 @@ lang: 'en'
                     faq
                 </h2>
                 <ul class="faq__list">
-                    <li class="faq__item" data-open-accordion>
+                    <li class="faq__item">
                         <svg class="icon" width="33" height="32">
                             <use href="./images/sprite.svg#done"></use>
                         </svg>
-                        <div class="faq__content">
+                        <button class="faq__button" type="button" aria-expanded="false" data-open-accordion>
+                            <span class="visually-hidden">
+                                open/close the accordion
+                            </span>
+                        </button>
+                        <div class="faq__content" data-accordion-content>
                             <h3 class="faq__subtitle">
                                 In which social networks do you offer growth?
                             </h3>
@@ -167,13 +172,17 @@ lang: 'en'
                                 audience and achieve your growth goals.
                             </p>
                         </div>
-                        <button class="faq__button"></button>
                     </li>
-                    <li class="faq__item" data-open-accordion>
+                    <li class="faq__item">
                         <svg class="icon" width="33" height="32">
                             <use href="./images/sprite.svg#done"></use>
                         </svg>
-                        <div class="faq__content">
+                        <button class="faq__button" type="button" aria-expanded="false" data-open-accordion>
+                            <span class="visually-hidden">
+                                open/close the accordion
+                            </span>
+                        </button>
+                        <div class="faq__content" data-accordion-content>
                             <h3 class="faq__subtitle">
                                 How much do your services cost?
                             </h3>
@@ -183,61 +192,71 @@ lang: 'en'
                                 analytics. Contact us for a detailed quote!
                             </p>
                         </div>
-                        <button class="faq__button"></button>
                     </li>
-                    <li class="faq__item" data-open-accordion>
+                    <li class="faq__item">
                         <svg class="icon" width="33" height="32">
                             <use href="./images/sprite.svg#done"></use>
                         </svg>
-                        <div class="faq__content">
+                        <button class="faq__button" type="button" aria-expanded="false" data-open-accordion>
+                            <span class="visually-hidden">
+                                open/close the accordion
+                            </span>
+                        </button>
+                        <div class="faq__content" data-accordion-content>
                             <h3 class="faq__subtitle">
                                 How long does it take to see results?
                             </h3>
                             <p class="faq__description">
                                 You can expect to see initial engagement growth within 1-2 months. Significant
-                                improvements in brand awareness and sales typically occur within 3-6 months, depending
+                                improvements in brand awareness and sales typically occur within 3-6 months,
+                                depending
                                 on the strategy.
                             </p>
                         </div>
-                        <button class="faq__button"></button>
                     </li>
-                    <li class="faq__item" data-open-accordion>
+                    <li class="faq__item">
                         <svg class="icon" width="33" height="32">
                             <use href="./images/sprite.svg#done"></use>
                         </svg>
-                        <div class="faq__content">
+                        <button class="faq__button" type="button" aria-expanded="false" data-open-accordion>
+                            <span class="visually-hidden">
+                                open/close the accordion
+                            </span>
+                        </button>
+                        <div class="faq__content" data-accordion-content>
                             <h3 class="faq__subtitle">
                                 Do you offer targeted advertising?
                             </h3>
                             <p class="faq__description">
-                                Yes! We specialize in targeted ad campaigns on Facebook, Instagram, TikTok, and more.
-                                Our team conducts audience research, sets up campaigns, and optimizes ads for maximum
+                                Yes! We specialize in targeted ad campaigns on Facebook, Instagram, TikTok, and
+                                more.
+                                Our team conducts audience research, sets up campaigns, and optimizes ads for
+                                maximum
                                 ROI.
                             </p>
                         </div>
-                        <button class="faq__button"></button>
                     </li>
                 </ul>
             </div>
         </section>
-        <footer class="footer">
-            <div class="container footer__container">
-                <h2 class="title footer__title">
-                    We hope that our information was useful!
-                </h2>
-                <p class="footer__text">
-                    Contact us and we will help your account become popular!
-                </p>
-                <button class="cta">
-                    Uprage your plane
-                    <svg class="icon" width="21" height="20">
-                        <use href="./images/sprite.svg#arrow-right"></use>
-                    </svg>
-                </button>
-            </div>
-        </footer>
     </main>
-    @@include('../components/scripts.html')
+    <footer class="footer">
+        <div class="container footer__container">
+            <h2 class="title footer__title">
+                We hope that our information was useful!
+            </h2>
+            <p class="footer__text">
+                Contact us and we will help your account become popular!
+            </p>
+            <button class="cta">
+                Uprage your plane
+                <svg class="icon" width="21" height="20">
+                    <use href="./images/sprite.svg#arrow-right"></use>
+                </svg>
+            </button>
+        </div>
+    </footer>
+    @@include('../components/resources/scripts.html')
 </body>
 
 </html>

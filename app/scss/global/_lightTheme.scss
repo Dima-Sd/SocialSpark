@@ -1,0 +1,31 @@
+.light-theme {
+    background-image: linear-gradient(var(--main-gradient), var(--main-gradient-secondary), var(--main-gradient-secondary), var(--main-gradient));
+
+    &.active {
+        .logo {
+            &__img--light {
+                display: none;
+            }
+
+            &__img--black {
+                display: block;
+            }
+        }
+
+        .menu {
+            &__link {
+                &:hover {
+                    color: var(--accent);
+                }
+
+                &:focus {
+                    outline: 1px solid var(--secondary-green);
+                }
+
+                &:active {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

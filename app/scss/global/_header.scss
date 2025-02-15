@@ -1,7 +1,19 @@
 .header {
-    background-color: $accent-dark;
-    color: $accent-light;
+    background-color: var(--main-gradient);
+    color: var(--accent);
     padding: 53px 0 27px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.logo {
+
+    &__img--black {
+        display: none;
+    }
+
+    &__img--light {
+        display: block;
+    }
 }
 
 .menu {
@@ -17,19 +29,19 @@
     &__link {
         font-size: 18px;
         line-height: 1;
-        color: $accent-light;
-        background-color: $dark-800;
+        color: var(--accent);
+        background-color: var(--background-menu);
         border-radius: 30px;
         padding: 14px 39px;
         outline-offset: 6px;
         transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
 
         &:hover {
-            background-color: $secondary-green;
+            background-color: var(--secondary-green);
         }
 
         &:focus {
-            outline: 1px solid $secondary-green;
+            outline: 1px solid var(--secondary-green);
         }
 
         &:active {
@@ -41,4 +53,29 @@
 .user-menu {
     display: flex;
     gap: 25px;
+}
+
+.sing-up {
+    align-self: flex-start;
+    border-radius: 30px;
+    line-height: 1;
+    font-size: 18px;
+    padding: 13px 34px;
+    outline: 1px solid var(--accent);
+    transition: background-color 0.3s, outline-color 0.3s, box-shadow 0.3s;
+
+    &:hover {
+        background-color: var(--secondary-green);
+        outline-color: transparent;
+    }
+
+    &:focus {
+        outline-color: var(--secondary-green);
+    }
+
+    &:active {
+        outline-color: transparent;
+        background-color: transparent;
+        box-shadow: inset 4px 4px 6px var(--secondary-green);
+    }
 }

@@ -11,10 +11,11 @@
 
     &__title {
         font-size: 100px;
-        color: $accent-light;
+        color: var(--accent);
         margin-bottom: 32px;
         font-family: "Nunito", serif;
         line-height: 1;
+        transition: color 0.3s;
     }
 
     &__description {
@@ -26,6 +27,6 @@
     &__img {
         margin: 0 auto;
         border-radius: 10px;
-        box-shadow: 0 0 20px 0 $dark, 0 25px 30px 0 $dark-opacity;
+        box-shadow: 0 0 20px 0 var(--main-gradient), 0 25px 30px 0 var(--main-gradient);
     }
 }

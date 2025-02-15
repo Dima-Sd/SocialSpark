@@ -1,22 +1,28 @@
-$dark: rgba(#090909, 0.15);
-$dark-opacity: rgba(#090909, 0.35);
-$accent-dark: #171719;
-$dark-900: #1C1C1C;
-$dark-800: #282828;
-$dark-800-opacity: rgba(#282828, 0.7);
-$dark-700: #393D3D;
+:root {
+    --main-gradient: #171719;
+    --main-gradient-secondary: #172621;
+    --background: rgba(22, 28, 28, 0.8);
+    --accent: #ECECEC;
+    --main-text: #C5C5C5;
+    --background-menu: #282828;
+    --background-progressbar: #282828;
+    
+    //Single-use style
+    --dark-800-opacity: rgba(40, 40, 40, 0.7);
+    --dark-700: #393D3D;
+    --light: #E6E6E6;
+    --light-700: #ACACAC;
+    --secondary-green: #034025;                                     
+    --green: #0F7E4E;
+    --secondary-yellow: #DAB020;
 
-$accent-light: #ECECEC;
-$light-900: #D9D9D9;
-$light-800: #C5C5C5;
-$light-600: #ACACAC;
-
-$green-900: #161C1C;
-$green-900-opacity: rgba(#161C1C, 0.8);
-$green-800: #15211D;
-$green-700: #172621;
-$secondary-green: #034025;
-$green-500: #0F7E4E;
-$green-400: #BACFC6;
-
-$secondary-yellow: #DAB020;
+    .light-theme.active {
+        --main-gradient: #EAE8E8;
+        --main-gradient-secondary: #BACFC6;
+        --background: #D9D9D9;
+        --accent: #171719;
+        --main-text: #282828;
+        --background-menu: #DBDBDB;
+        --background-progressbar: #ACACAC;
+    }
+}

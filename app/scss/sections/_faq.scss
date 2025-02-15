@@ -14,12 +14,11 @@
     &__item {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         gap: 50px;
-        padding: 25px 52px;
-        cursor: pointer;
-        overflow: hidden;
+        padding: 27px 52px;
+        background-color: --main-gradient-secondary;
         position: relative;
-        transition: margin 0.3s;
 
         &:not(:last-child) {
             margin-bottom: 30px;
@@ -33,32 +32,7 @@
             transform: translateY(-50%);
             width: 2px;
             height: 100%;
-            background-color: $secondary-yellow;
-        }
-
-        &.active {
-            &:not(:last-child) {
-                margin-bottom: 70px;
-            }
-
-            .faq__subtitle {
-                margin-bottom: 38px;
-            }
-
-            .faq__description {
-                opacity: 100%;
-                transform: translateY(0);
-            }
-
-            .faq__button {
-                &::before {
-                    transform: rotate(135deg);
-                }
-
-                &::after {
-                    transform: rotate(45deg);
-                }
-            }
+            background-color: var(--secondary-yellow);
         }
     }
 
@@ -66,45 +40,115 @@
         max-width: 880px;
         width: 100%;
         margin-right: auto;
+        overflow: hidden;
+        pointer-events: none;
+
+        &.active {
+            .faq__description {
+                height: auto;
+                opacity: 100%;
+                pointer-events: auto;
+            }
+
+            .faq__subtitle {
+                margin-bottom: 38px;
+            }
+
+            .faq__button {
+                transform: rotate(45deg);
+            }
+        }
     }
 
     &__subtitle {
         font-family: "Nunito", serif;
         font-size: 20px;
-        color: $accent-light;
+        color: var(--accent-light);
         font-weight: 600;
+        transition: margin-bottom 0.3s, color 0.3s;
     }
 
     &__description {
         line-height: 1.5;
-        transition: opacity 0.3s, transform 0.3s;
+        pointer-events: none;
+        height: 0;
         opacity: 0;
-        transform: translateY(-100%);
+        transition: height 0.3s, opacity 0.3s;
     }
 
     &__button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        border: 2px solid $green-500;
-        position: relative;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transition: box-shadow 0.3s, outline 0.3s, opacity 0.3s;
 
         &::before,
         &::after {
             content: "";
             position: absolute;
+            right: 8px;
+            top: 43px;
             width: 2px;
             height: 18px;
             border-radius: 1px;
-            background-color: $green-500;
+            background-color: var(--green);
             transition: transform 0.3s;
         }
 
         &::before {
             transform: rotate(90deg);
         }
+
+        &.active {
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+
+        &:hover {
+            box-shadow: 0 25px 30px 0 var(--main-gradient);
+        }
+
+        &:focus {
+            outline: 1px solid var(--secondary-green);
+        }
+
+        &:active {
+            opacity: 0.3;
+        }
     }
+
+    // &__button {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: 44px;
+    //     height: 44px;
+    //     border-radius: 50%;
+    //     border: 2px solid var(--green);
+    //     position: relative;
+    //     order: 1;
+    //     transition: transform 0.3s;
+
+    //     &::before,
+    //     &::after {
+    //         content: "";
+    //         position: absolute;
+    //         width: 2px;
+    //         height: 18px;
+    //         border-radius: 1px;
+    //         background-color: var(--green);
+    //     }
+
+    //     &::before {
+    //         transform: rotate(90deg);
+    //     }
+    // }
 }

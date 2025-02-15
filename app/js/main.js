@@ -13,12 +13,14 @@ document.addEventListener("DOMContentLoaded", function () {
             langList.classList.toggle("is-open");
         });
     })();
-
 });
-const buttonSwitcher = document.querySelector('[data-theme-switcher]')
 
-buttonSwitcher.addEventListener('click', function () {
-    this.classList.toggle('theme-light')
+const switcherTheme = document.querySelector('[data-theme-switcher]')
+const body = document.querySelector('.light-theme')
+
+switcherTheme.addEventListener('click', function () {
+    this.classList.toggle('light-mode')
+    body.classList.toggle('active')
 })
 
 const langSwitcher = document.querySelector('.current')
@@ -28,15 +30,21 @@ langSwitcher.addEventListener('click', function () {
 });
 
 const accordionButtons = document.querySelectorAll('[data-open-accordion]');
-
-accordionButtons.forEach(function (item) {
+const accordionContent = document.querySelectorAll('[data-accordion-content]');
+accordionButtons.forEach((item, index) => {
     item.addEventListener('click', function () {
-        accordionButtons.forEach(btn => {
+        const isExpanded = item.getAttribute("aria-expanded") === "true";
+
+        accordionButtons.forEach((btn, i) => {
             if (btn !== item) {
+                btn.setAttribute("aria-expanded", "false");
                 btn.classList.remove("active");
+                accordionContent[i].classList.remove("active");
             }
         });
 
-        this.classList.toggle("active");
+        item.setAttribute("aria-expanded", !isExpanded);
+        item.classList.toggle("active");
+        accordionContent[index].classList.toggle("active");
     });
 });

@@ -55,7 +55,7 @@ function browsersync() {
 function watching() {
     watch(['app/scss/**/*.scss'], styles)
     watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts)
-    watch(["app/*.html"]).on('change', browserSync.reload);
+    watch(["app/html/**/*.html"]).on('change', htmlInclude);
 }
 
 exports.styles = styles

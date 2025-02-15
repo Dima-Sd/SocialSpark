@@ -5,7 +5,7 @@
 
     &__subtitle {
         font-size: 18px;
-        color: $accent-light;
+        color: var(--accent);
     }
 
     &__img {
@@ -24,17 +24,17 @@
         transition: background-color 0.3s, outline 0.3s;
 
         &:hover {
-            background-color: $secondary-green;
+            background-color: var(--secondary-green);
         }
 
         &:focus {
-            outline: 1px solid $secondary-green;
+            outline: 1px solid var(--secondary-green);
         }
 
         &:active {
             background-color: transparent;
             outline-color: transparent;
-            box-shadow: inset 4px 4px 6px $secondary-green;
+            box-shadow: inset 4px 4px 6px var(--secondary-green);
         }
     }
 }

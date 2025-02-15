@@ -5,10 +5,10 @@ body {
     line-height: 1.3;
     letter-spacing: normal;
     font-style: normal;
-    color: $light-800;
+    color: var(--main-text);
     min-height: 100vh;
-    background-image: linear-gradient($accent-dark, $green-800, $accent-dark, $green-700, $accent-dark);
-    border-radius: 30px;
+    background-image: linear-gradient(var(--main-gradient), var(--main-gradient-secondary), var(--main-gradient), var(--main-gradient-secondary), var(--main-gradient));
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .visually-hidden {
@@ -42,7 +42,7 @@ body {
     font-family: "Nunito", serif;
     font-size: 70px;
     line-height: 1.2;
-    color: $accent-light;
+    color: var(--accent);
     text-align: center;
     margin-bottom: 75px;
 }
@@ -57,7 +57,7 @@ body {
     }
 
     &:focus {
-        outline: 1px solid $secondary-green;
+        outline: 1px solid var(--secondary-green);
     }
 
     &:active {
@@ -65,56 +65,31 @@ body {
     }
 }
 
-.sing-up {
-    align-self: flex-start;
-    border-radius: 30px;
-    line-height: 1;
-    font-size: 18px;
-    padding: 13px 34px;
-    outline: 1px solid $accent-light;
-    transition: background-color 0.3s, outline-color 0.3s, box-shadow 0.3s;
-
-    &:hover {
-        background-color: $secondary-green;
-        outline-color: transparent;
-    }
-
-    &:focus {
-        outline-color: $secondary-green;
-    }
-
-    &:active {
-        outline-color: transparent;
-        background-color: transparent;
-        box-shadow: inset 4px 4px 6px $secondary-green;
-    }
-}
-
 .cta {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 29px 13px;
+    padding: 16px 29px 13px;
     font-size: 18px;
-    background-color: $accent-light;
-    color: $accent-dark;
+    background-color: var(--accent);
+    color: var(--background);
     line-height: 1;
     border-radius: 20px;
     outline-offset: 7px;
     transition: background-color 0.3s, color 0.3s, outline 0.3s, box-shadow 0.3s;
 
     &:hover {
-        background-color: $secondary-green;
-        color: $accent-light;
+        background-color: var(--secondary-green);
+        color: var(--accent);
     }
 
     &:focus {
-        outline: 1px solid $secondary-green;
+        outline: 1px solid var(--secondary-green);
     }
 
     &:active {
         background-color: transparent;
-        color: $accent-light;
-        box-shadow: inset 4px 4px 6px $secondary-green;
+        color: var(--accent);
+        box-shadow: inset 4px 4px 6px var(--secondary-green);
     }
 }
