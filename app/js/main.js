@@ -29,22 +29,20 @@ langSwitcher.addEventListener('click', function () {
     langList.classList.toggle('active')
 });
 
-const accordionButtons = document.querySelectorAll('[data-open-accordion]');
-const accordionContent = document.querySelectorAll('[data-accordion-content]');
-accordionButtons.forEach((item, index) => {
-    item.addEventListener('click', function () {
-        const isExpanded = item.getAttribute("aria-expanded") === "true";
+if ($('.faq__button').length) {
+    $(function () {
+        $('.faq__description').hide();
+        $('.faq__button').click(function () {
+            let $parent = $(this).closest('.faq__item');
+            let $content = $parent.find('.faq__content');
+            let $description = $parent.find('.faq__description');
 
-        accordionButtons.forEach((btn, i) => {
-            if (btn !== item) {
-                btn.setAttribute("aria-expanded", "false");
-                btn.classList.remove("active");
-                accordionContent[i].classList.remove("active");
-            }
+            $('.faq__button').not(this).removeClass('active');
+            $('.faq__description').not($description).slideUp();
+
+            $(this).toggleClass('active');
+            $description.slideToggle();
         });
-
-        item.setAttribute("aria-expanded", !isExpanded);
-        item.classList.toggle("active");
-        accordionContent[index].classList.toggle("active");
     });
-});
+}
+

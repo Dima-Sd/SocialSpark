@@ -65,7 +65,7 @@
         width: 100%;
     }
 
-    &__list-feature-item {
+    &__feature-item {
         max-width: 512px;
         width: 100%;
         border-radius: 30px;
@@ -78,7 +78,7 @@
         }
     }
 
-    &__list-feature-title {
+    &__subtitle {
         margin-bottom: 26px;
         font-size: 20px;
         color: var(--accent);
@@ -86,7 +86,7 @@
         font-family: "Nunito", serif;
     }
 
-    &__list-feature-description {
+    &__description {
         line-height: 1;
     }
 }

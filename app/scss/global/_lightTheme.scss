@@ -1,6 +1,5 @@
 .light-theme {
-    background-image: linear-gradient(var(--main-gradient), var(--main-gradient-secondary), var(--main-gradient-secondary), var(--main-gradient));
-
+   
     &.active {
         .logo {
             &__img--light {
@@ -11,20 +10,12 @@
                 display: block;
             }
         }
+    }
 
-        .menu {
-            &__link {
-                &:hover {
-                    color: var(--accent);
-                }
-
-                &:focus {
-                    outline: 1px solid var(--secondary-green);
-                }
-
-                &:active {
-                    opacity: 0.5;
-                }
+    .faq {
+        &__button {
+            &:hover {
+                box-shadow: 0 7px 17px 0 var(--dark-500);
             }
         }
     }

@@ -6,13 +6,15 @@
     --main-text: #C5C5C5;
     --background-menu: #282828;
     --background-progressbar: #282828;
-    
+
     //Single-use style
+    --accent-light: #ECECEC;
     --dark-800-opacity: rgba(40, 40, 40, 0.7);
     --dark-700: #393D3D;
     --light: #E6E6E6;
+    --dark-500: rgba(25, 25, 25, 0.6);
     --light-700: #ACACAC;
-    --secondary-green: #034025;                                     
+    --secondary-green: #034025;
     --green: #0F7E4E;
     --secondary-yellow: #DAB020;
 
@@ -23,6 +25,8 @@
         --accent: #171719;
         --main-text: #282828;
         --background-menu: #DBDBDB;
-        --background-progressbar: #ACACAC;
+        --background-progressbar: #EAE8E8;
+
+        --dark-500: rgba(130, 130, 130, 0.6);
     }
 }

@@ -34,10 +34,11 @@
         border-radius: 30px;
         padding: 14px 39px;
         outline-offset: 6px;
-        transition: background-color 0.3s, outline 0.3s, opacity 0.3s;
+        transition: background-color 0.3s, color 0.3s, outline 0.3s, opacity 0.3s;
 
         &:hover {
             background-color: var(--secondary-green);
+            color: var(--accent-light);
         }
 
         &:focus {
