@@ -41,6 +41,7 @@ if ($('.faq__button').length) {
             $('.faq__description').not($description).slideUp();
 
             $(this).toggleClass('active');
+            $($description ).toggleClass('active');
             $description.slideToggle();
         });
     });

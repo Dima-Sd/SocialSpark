@@ -1,13 +1,53 @@
-.light-theme {
-   
-    &.active {
-        .logo {
-            &__img--light {
-                display: none;
+.light-theme.active {
+    .logo {
+        &__img--light {
+            display: none;
+        }
+
+        &__img--dark {
+            display: block;
+        }
+    }
+
+    .switcher-lang {
+        &__link:active {
+            &.current {
+                color: var(--background-menu-link);
+            }
+        }
+
+    }
+
+    .sing-up {
+        &:active {
+            color: var(--background-menu-link);
+        }
+    }
+
+    .switcher-theme {
+        background-color: var(--light-700);
+
+        &::before {
+            background-color: var(--dark-700);
+        }
+    }
+
+    .offer {
+        &__team-item:not(:last-child)::before {
+            background-color: var(--light-700);
+        }
+    }
+
+    .team-card {
+        &__link {
+            transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+
+            &:hover {
+                color: var(--accent-light);
             }
 
-            &__img--black {
-                display: block;
+            &:active {
+                color: var(--accent-dark);
             }
         }
     }
@@ -15,7 +55,7 @@
     .faq {
         &__button {
             &:hover {
-                box-shadow: 0 7px 17px 0 var(--dark-500);
+                box-shadow: 0 3px 3px 0 var(--shadow-dashboard-opacity-15);
             }
         }
     }

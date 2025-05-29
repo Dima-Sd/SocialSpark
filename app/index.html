@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,72 +8,76 @@
         Social Spark – Marketing Agency
     </title>
     <link rel="icon" type="image/png" href="./images/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
-<link rel="shortcut icon" href="./images/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
-<meta name="apple-mobile-web-app-title" content="MyWebSite" />
-<link rel="manifest" href="./images/favicon/site.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="light-theme">
     <button class="switcher-theme" type="button" data-theme-switcher>
-    <span class="visually-hidden">
-        Turn on/off dark/light mode
-    </span>
-    <svg class="icon" width="17" height="17">
-        <use href="./images/sprite.svg#moon"></use>
-    </svg>
-    <svg class="icon" width="17" height="17">
-        <use href="./images/sprite.svg#sun"></use>
-    </svg>
-</button>
-    <header class="header">
-    <div class="container">
-        <nav class="menu">
-            <a class="logo" href="#">
-                <img class="logo__img logo__img--light" src="./images/logo-light.svg" alt="Logo of the Social Spark agency" width="137" height="75">
-                <img class="logo__img logo__img--black" src="./images/logo-dark.svg" alt="Logo of the Social Spark agency" width="137" height="75">
-            </a>
-            <ul class="menu__list">
-                <li class="menu__item">
-                    <a class="menu__link" href="#">
-                        About
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">
-                        FAQ
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link" href="#">
-                        Social platforms
-                    </a>
-                </li>
-            </ul>
-            <div class="user-menu">
-                <div class="switcher-lang">
-    <span class="switcher-lang__link current">
-        en
-        <svg class="icon switcher-lang__icon" width="6" height="5">
-            <use href="./images/sprite.svg#arrow-down"></use>
+        <span class="visually-hidden">
+            Turn on/off dark/light mode
+        </span>
+        <svg class="icon" width="17" height="17">
+            <use href="./images/sprite.svg#moon"></use>
         </svg>
-    </span>
-    <a class="switcher-lang__link switcher-lang__link--uk" href="#">
-        uk
-    </a>
-</div>
-                <a class="sing-up" href="#">
-                    Sign up
+        <svg class="icon" width="17" height="17">
+            <use href="./images/sprite.svg#sun"></use>
+        </svg>
+    </button>
+    <header class="header">
+        <div class="container">
+            <nav class="menu">
+                <a class="logo header__logo" href="#">
+                    <img class="logo__img logo__img--light" src="./images/logo-light.svg"
+                        alt="Logo of the Social Spark agency" width="137" height="75">
+                    <img class="logo__img logo__img--dark" src="./images/logo-dark.svg"
+                        alt="Logo of the Social Spark agency" width="137" height="75">
                 </a>
-            </div>
-        </nav>
-    </div>
-</header>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            About
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#">
+                            Social platforms
+                        </a>
+                    </li>
+                </ul>
+                <div class="user-menu">
+                    <div class="switcher-lang">
+                        <span class="switcher-lang__link current">
+                            en
+                            <svg class="icon switcher-lang__icon" width="6" height="5">
+                                <use href="./images/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </span>
+                        <a class="switcher-lang__link switcher-lang__link--uk" href="#">
+                            uk
+                        </a>
+                    </div>
+                    <a class="sing-up" href="#">
+                        Sign up
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
     <main class="main">
         <section class="hero section">
             <div class="container">
@@ -90,9 +95,12 @@
                         </svg>
                     </a>
                 </div>
-                <img class="hero__img" src="./images/window.png"
-                    alt="Performance analysis that ensures rapid growth for social media accounts" width="944"
-                    height="586">
+                <picture>
+                    <source srcset="./images/window/window.png 1x, ./images/window/window-2x.png 2x">
+                    <img class="hero__img" src="./images/window/window.png"
+                        alt="Performance analysis that ensures rapid growth for social media accounts" width="944"
+                        height="586">
+                </picture>
             </div>
         </section>
         <section class="offer section" style="background-image: url('./images/interview.jpg');">
@@ -117,51 +125,54 @@
                         <ul class="offer__team-list">
                             <li class="offer__team-item">
                                 <article class="team-card">
-    <h4 class="team-card__subtitle">
-        Lucas Bennett
-    </h4>
-    <img class="team-card__img" src="./images/team/lucasBennett.jpg" alt="Lucas Bennett" width="49" height="50">
-    <a class="team-card__link" href="#">
-        <svg class="icon" width="20" height="16">
-            <use href="./images/sprite.svg#gmail"></use>
-        </svg>
-        <span class="visually-hidden">
-            Get in touch with a team member Lucas Bennett
-        </span>
-    </a>
-</article>
+                                    <h4 class="team-card__subtitle">
+                                        Lucas Bennett
+                                    </h4>
+                                    <img class="team-card__img" src="./images/team/lucasBennett.jpg" alt="Lucas Bennett"
+                                        width="49" height="50">
+                                    <a class="team-card__link" href="#">
+                                        <svg class="icon" width="20" height="16">
+                                            <use href="./images/sprite.svg#gmail"></use>
+                                        </svg>
+                                        <span class="visually-hidden">
+                                            Get in touch with a team member Lucas Bennett
+                                        </span>
+                                    </a>
+                                </article>
                             </li>
                             <li class="offer__team-item">
                                 <article class="team-card">
-    <h4 class="team-card__subtitle">
-        Henry Blackwood
-    </h4>
-    <img class="team-card__img" src="./images/team/henryBlackwood.jpg" alt="Henry Blackwood" width="49" height="50">
-    <a class="team-card__link" href="#">
-        <svg class="icon" width="20" height="16">
-            <use href="./images/sprite.svg#gmail"></use>
-        </svg>
-        <span class="visually-hidden">
-            Get in touch with a team member Henry Blackwood
-        </span>
-    </a>
-</article>
+                                    <h4 class="team-card__subtitle">
+                                        Henry Blackwood
+                                    </h4>
+                                    <img class="team-card__img" src="./images/team/henryBlackwood.jpg"
+                                        alt="Henry Blackwood" width="49" height="50">
+                                    <a class="team-card__link" href="#">
+                                        <svg class="icon" width="20" height="16">
+                                            <use href="./images/sprite.svg#gmail"></use>
+                                        </svg>
+                                        <span class="visually-hidden">
+                                            Get in touch with a team member Henry Blackwood
+                                        </span>
+                                    </a>
+                                </article>
                             </li>
                             <li class="offer__team-item">
                                 <article class="team-card">
-    <h4 class="team-card__subtitle">
-        John Smith
-    </h4>
-    <img class="team-card__img" src="./images/team/johnSmith.jpg" alt="John Smith" width="49" height="50">
-    <a class="team-card__link" href="#">
-        <svg class="icon" width="20" height="16">
-            <use href="./images/sprite.svg#gmail"></use>
-        </svg>
-        <span class="visually-hidden">
-            Get in touch with a team member John Smith
-        </span>
-    </a>
-</article>
+                                    <h4 class="team-card__subtitle">
+                                        John Smith
+                                    </h4>
+                                    <img class="team-card__img" src="./images/team/johnSmith.jpg" alt="John Smith"
+                                        width="49" height="50">
+                                    <a class="team-card__link" href="#">
+                                        <svg class="icon" width="20" height="16">
+                                            <use href="./images/sprite.svg#gmail"></use>
+                                        </svg>
+                                        <span class="visually-hidden">
+                                            Get in touch with a team member John Smith
+                                        </span>
+                                    </a>
+                                </article>
                             </li>
                         </ul>
                     </div>

@@ -3,16 +3,9 @@
     color: var(--accent);
     padding: 53px 0 27px;
     transition: color 0.3s, background-color 0.3s;
-}
 
-.logo {
-
-    &__img--black {
-        display: none;
-    }
-
-    &__img--light {
-        display: block;
+    &__logo {
+        margin-right: 37px;
     }
 }
 
@@ -29,7 +22,6 @@
     &__link {
         font-size: 18px;
         line-height: 1;
-        color: var(--accent);
         background-color: var(--background-menu);
         border-radius: 30px;
         padding: 14px 39px;
@@ -63,11 +55,12 @@
     font-size: 18px;
     padding: 13px 34px;
     outline: 1px solid var(--accent);
-    transition: background-color 0.3s, outline-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, color 0.3s, outline-color 0.3s, box-shadow 0.3s;
 
     &:hover {
         background-color: var(--secondary-green);
         outline-color: transparent;
+        color: var(--accent-light);
     }
 
     &:focus {
